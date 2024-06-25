@@ -46,6 +46,7 @@ use everestrs::serde as everest_serde;
 use everestrs::serde_json as everest_serde_json;
 use generated::types::powermeter::{
     Powermeter, TransactionRequestStatus, TransactionStartResponse, TransactionStopResponse,
+    OCMFUserIdentificationStatus, OCMFIdentificationType,
 };
 use generated::types::serial_comm_hub_requests::{StatusCodeEnum, VectorUint16};
 use generated::types::units::{Current, Energy, Frequency, Power, ReactivePower, Voltage};
