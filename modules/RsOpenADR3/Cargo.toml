@@ -1,0 +1,11 @@
+[package]
+name = "RsOpenADR3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+everestrs = { workspace = true }
+log = "0.4.20"
+
+[build-dependencies]
+everestrs-build = { workspace = true }

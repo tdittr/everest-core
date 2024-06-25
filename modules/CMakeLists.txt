@@ -38,6 +38,7 @@ add_subdirectory(simulation)
 
 if(${EVEREST_ENABLE_RS_SUPPORT})
     ev_add_module(RsIskraMeter)
+    ev_add_module(RsOpenADR3)
     ev_add_module(RsPaymentTerminal)
     add_subdirectory(rust_examples)
 endif()

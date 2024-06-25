@@ -46,7 +46,6 @@ use everestrs::serde as everest_serde;
 use everestrs::serde_json as everest_serde_json;
 use generated::types::powermeter::{
     Powermeter, TransactionRequestStatus, TransactionStartResponse, TransactionStopResponse,
-    OCMFUserIdentificationStatus, OCMFIdentificationType,
 };
 use generated::types::serial_comm_hub_requests::{StatusCodeEnum, VectorUint16};
 use generated::types::units::{Current, Energy, Frequency, Power, ReactivePower, Voltage};
@@ -344,10 +343,10 @@ impl From<&ModuleConfig> for OcmfData {
         // since otherwise the transpacency tool will not accept the signed
         // data. See https://safe-ev.org/de/transparenzsoftware/e-mobilist/.
         let sanitize = |user_string: &str| {
-            if user_string.contains("|") {
+            if user_string.contains('|') {
                 log::warn!("Removing the forbidden symbol`|` from {user_string}");
             }
-            user_string.replace("|", " ")
+            user_string.replace('|', " ")
         };
 
         OcmfData {
