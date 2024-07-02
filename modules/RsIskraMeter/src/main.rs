@@ -344,10 +344,10 @@ impl From<&ModuleConfig> for OcmfData {
         // since otherwise the transpacency tool will not accept the signed
         // data. See https://safe-ev.org/de/transparenzsoftware/e-mobilist/.
         let sanitize = |user_string: &str| {
-            if user_string.contains("|") {
+            if user_string.contains('|') {
                 log::warn!("Removing the forbidden symbol`|` from {user_string}");
             }
-            user_string.replace("|", " ")
+            user_string.replace('|', " ")
         };
 
         OcmfData {

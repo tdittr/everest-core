@@ -1,0 +1,19 @@
+description: Retrieves an energy provider profile provided via OpenADR 3.0
+config:
+  vtn_address:
+    description: The address of the server provided by the energy provider
+    type: string
+  poll_interval:
+    description: Delay between two polls to the server in seconds
+    type: number
+    default: 3600
+provides: {}
+requires:
+  r_limits:
+    interface: external_energy_limits
+metadata:
+  license: https://opensource.org/licenses/Apache-2.0
+  authors:
+    - Maximilian Pohl
+    - Tamme Dittrich
+enable_external_mqtt: false

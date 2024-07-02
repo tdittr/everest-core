@@ -37,6 +37,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "RsOpenADR3"
+version = "0.1.0"
+dependencies = [
+ "everestrs",
+ "everestrs-build",
+ "log",
+]
+
+[[package]]
 name = "RsPaymentTerminal"
 version = "0.1.0"
 dependencies = [
